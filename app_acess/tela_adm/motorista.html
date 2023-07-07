@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        ul {
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        li {
+            background-color: rgb(255, 253, 250);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 4px;
+            display: flex;
+            gap: 30px;
+            margin: 0 auto 20px auto;
+            font-weight: bold;
+        }
+
+        .titulo {
+            font-size: 1.4em;
+            align-self: center;
+            margin-top: 40px;
+        }
+
+        .prod {
+            cursor: pointer;
+            padding: 6px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .infs {
+            display: none;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        #myProgress {
+            align-self: center;
+            border: 1px solid black;
+            width: 300px;
+            background-color: grey;
+        }
+
+
+
+        #myBar {
+            width: 0%;
+            height: 30px;
+            background-color: green;
+        }
+
+        .conf {
+            transform: scale(1.5) translate(-50%, 0);
+        }
+
+        .confirmed {
+            background-color: #188255;
+        }
+
+        p.concl {
+            color: white;
+            font-weight: bolder;
+        }
+
+        a {
+            margin-top: 70px;
+        }
+
+        .apar {
+            display: flex;
+        }
+
+        .grup {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            align-items: center;
+            padding: 3px;
+            border-radius: 10px;
+        }
+
+        .perf {
+            display: flex;
+            align-self: flex-start;
+            align-content: flex-start;
+            flex-direction: column;
+        }
+
+        button {
+            align-self: flex-end;
+            width: 20px;
+            height: 20px;
+            background-color: #188255;
+        }
+
+        #back {
+            position: absolute;
+            top: 75%;
+        }
+
+        #add {
+            position: absolute;
+            top: 70%;
+            align-self: center;
+            background-color: rgb(201, 130, 130);
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 2px;
+            width: 160px;
+            font-size: 1.2em;
+        }
+
+        h2 {
+            font-size: 1em;
+            margin: 0 0 0 30px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tela_ext">
+        <div class="tela">
+            <h1 class="titulo">Entregas</h1>
+            <ul>
+                <h2>Entrega 01</h2>
+                <li class="prod">
+                    <div class="perf">
+                        <p>Cliente: Tales Marques</p>
+                        <p>Entrega: 129864-2</p>
+                        <p>End: Rua Hngawo JAgeooogwo</p>
+                    </div>
+                    <div class="infs">
+                        <div class="grup">
+                            <p class="nome">Ferro Gussa</p>
+                            <p class="qtd">100Kg</p>
+                        </div>
+                        <div class="grup">
+                            <p class="nome">Silício</p>
+                            <p class="qtd">200Kg</p>
+                        </div>
+                        <div class="grup">
+                            <p class="nome">Carbono</p>
+                            <p class="qtd">50Kg</p>
+                        </div>
+                    </div>
+                    <button>+</button>
+                </li>
+                <h2>Entrega 02</h2>
+                <li class="prod">
+                    <div class="perf">
+                        <p>Cliente: Tales Marques</p>
+                        <p>Entrega: 129864-2</p>
+                        <p>End: Rua Hngawo JAgeooogwo</p>
+                    </div>
+                    <div class="infs">
+                        <div class="grup">
+                            <p class="nome">Ferro Gussa</p>
+                            <p class="qtd">100Kg</p>
+                        </div>
+                        <div class="grup">
+                            <p class="nome">Silício</p>
+                            <p class="qtd">200Kg</p>
+                        </div>
+                        <div class="grup">
+                            <p class="nome">Carbono</p>
+                            <p class="qtd">50Kg</p>
+                        </div>
+                    </div>
+                    <button>+</button>
+                </li>
+                <h2>Entrega 03</h2>
+                <li class="prod">
+                    <div class="perf">
+                        <p>Cliente: Tales Marques</p>
+                        <p>Entrega: 129864-2</p>
+                        <p>End: Rua Hngawo JAgeooogwo</p>
+                    </div>
+                    <div class="infs">
+                        <div class="grup">
+                            <p class="nome">Ferro Gussa</p>
+                            <p class="qtd">100Kg</p>
+                        </div>
+                        <div class="grup">
+                            <p class="nome">Silício</p>
+                            <p class="qtd">200Kg</p>
+                        </div>
+                        <div class="grup">
+                            <p class="nome">Carbono</p>
+                            <p class="qtd">50Kg</p>
+                        </div>
+                    </div>
+                    <button>+</button>
+                </li>
+
+            </ul>
+            <a href="#" id="add">Adicionar entrega</a>
+            <a href="tela.html" id="back" class="botao">Voltar</a>
+        </div>
+    </div>
+
+    <script>
+        var botao = document.querySelector("button");
+        var sec = document.querySelector("div.infs");
+
+        var states = 0;
+
+        botao.addEventListener("click", () => {
+            if (states == 0) {
+                sec.classList.add("apar");
+                botao.innerText = "-";
+                botao.style.backgroundColor = "#821818";
+                botao.style.color = "white";
+                states = 1;
+            } else {
+                states = 0;
+                botao.innerText = "+";
+                sec.classList.remove("apar");
+                botao.style.backgroundColor = "#188255";
+                botao.style.color = "black";
+            }
+        })
+    </script>
+</body>
+
+</html>

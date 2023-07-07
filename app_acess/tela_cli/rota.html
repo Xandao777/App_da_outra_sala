@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiTrack</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .map {
+            background-image: url(../tela_mot/imagens/Polish_20230705_193757787.jpg);
+            width: 300px;
+            height: 500px;
+            background-size: cover;
+            background-position: center center;
+            margin: 30px auto;
+            border: 3px solid black;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            align-self: center;
+        }
+
+        #myProgress {
+            align-self: center;
+            border: 1px solid black;
+            width: 300px;
+            background-color: grey;
+            border-radius: 20px;
+        }
+
+        #myBar {
+            width: 40%;
+            height: 10px;
+            background-color: green;
+        }
+
+        a {
+            margin: 5px 0 5px 0;
+        }
+
+        input {
+            cursor: pointer;
+            align-self: center;
+            background-color: rgb(139, 201, 130);
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 2px;
+            width: 100px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tela_ext">
+        <div class="tela">
+            <div class="map"></div>
+            <h1>Em trânsito</h1>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+            <a href="tela.html" id="back" class="botao">Voltar</a>
+        </div>
+    </div>
+</body>
+
+</html>

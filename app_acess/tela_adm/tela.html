@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiTrack</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .perfil {
+            background-color: rgb(159, 159, 159);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 230px;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 120px;
+        }
+
+        .foto {
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 246, 229);
+            border: 1px groove black;
+            border-radius: 50%;
+        }
+
+        ul {
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        .mot {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 253, 250);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 4px;
+            display: flex;
+            gap: 30px;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        .infs {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        #out {
+            margin: 5px 0 10px 300px;
+            width: 50px;
+            align-self: center;
+            background-color: rgb(201, 130, 130);
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 2px;
+            font-size: 1.2em;
+        }
+
+        #access {
+            background-color: rgba(240, 248, 255, 0);
+            border: none;
+        }
+
+        a>p {
+            display: inline-block;
+        }
+
+        #ex {
+            position: relative;
+        }
+
+        ul>a {
+            text-decoration: none;
+            color: black;
+            background-color: rgb(255, 253, 250);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 4px;
+            display: flex;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        ul>a>li {
+            display: flex;
+        }
+
+        #gamb {
+            color: rgb(255, 253, 250);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tela_ext">
+        <div class="tela">
+            <div class="perfil">
+                <div class="foto"></div>
+                <div class="infs">
+                    <p id="nome">Alexandre Rei do Gado</p>
+                    <p id="ra"><strong>RA:</strong> 513613784-33</p>
+                </div>
+                <a href="../../index.html" id="out">Sair</a>
+            </div>
+            <ul>
+                <a href="motorista.html">
+                    <li id="ex">
+                        <p class="nome">Jorge Santo Silva <p id="gamb">---.......-----.'</p><strong>RA:</strong> 902569936-98</p>
+                    </li>
+                </a>
+                <li class="mot">
+                    <p class="nome">Josefino Abreu Mato</p>
+                    <p class="ra"><strong>RA:</strong> 135132678-23</p>
+                </li>
+                <li class="mot">
+                    <p class="nome">Clerberson da Costa</p>
+                    <p class="ra"><strong>RA:</strong> 248965432-56</p>
+                </li>
+                <li class="mot">
+                    <p class="nome">Rogerio Mato Solsa</p>
+                    <p class="ra"><strong>RA:</strong> 642624367-86</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        ul {
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        li {
+            background-color: rgb(255, 253, 250);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 4px;
+            display: flex;
+            gap: 30px;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        .foto {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #carb {
+            background-image: url(imagens/carbono.jpg);
+        }
+
+        #sil {
+            background-image: url(imagens/silicio.jpg);
+        }
+
+        #guss {
+            background-image: url(imagens/ferro-gussa.jpg);
+        }
+
+        #aco {
+            background-image: url(imagens/sucata.jpg);
+        }
+
+        #liga {
+            background-image: url(imagens/liga.jpg);
+        }
+
+
+        .titulo {
+            font-size: 1.4em;
+            align-self: center;
+            margin-top: 40px;
+        }
+
+        .prod {
+            cursor: pointer;
+            padding: 6px;
+            width: 350px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .infs {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #myProgress {
+            align-self: center;
+            border: 1px solid black;
+            width: 300px;
+            background-color: grey;
+        }
+
+        #myBar {
+            width: 0%;
+            height: 30px;
+            background-color: green;
+        }
+
+        .conf {
+            transform: scale(1.5) translate(-50%, 0);
+        }
+
+        .confirmed {
+            background-color: #188255;
+        }
+
+        p.concl {
+            color: white;
+            font-weight: bolder;
+        }
+
+        a {
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tela_ext">
+        <div class="tela">
+            <h1 class="titulo">Produtos a retirar</h1>
+            <ul>
+                <li class="prod" onclick="
+                    style.backgroundColor = '#188255'; confirm()
+                    ">
+                    <div class="foto" id="carb"></div>
+                    <div class="infs">
+                        <p class="nome">Carbono</p>
+                        <p class="qtd">100Kg</p>
+                    </div>
+                </li>
+                <li class="prod" onclick="
+                    style.backgroundColor = '#188255'; confirm()
+                    ">
+                    <div class="foto" id="sil"></div>
+                    <div class="infs">
+                        <p class="nome">Silício</p>
+                        <p class="qtd">200Kg</p>
+                    </div>
+                </li>
+                <li class="prod" onclick="
+                    style.backgroundColor = '#188255'; confirm()
+                    ">
+                    <div class="foto" id="guss"></div>
+                    <div class="infs">
+                        <p class="nome">Ferro Gussa</p>
+                        <p class="qtd">100Kg</p>
+                    </div>
+                </li>
+                <li class="prod" onclick="
+                    style.backgroundColor = '#188255'; confirm()
+                    "> 
+                    <div class="foto" id="aco"></div>
+                    <div class="infs">
+                        <p class="nome">Sucata de Aço</p>
+                        <p class="qtd">50Kg</p>
+                    </div>
+                </li>
+                <li class="prod" onclick="
+                    style.backgroundColor = '#188255'; confirm()
+                    ">
+                    <div class="foto" id="liga"></div>
+                    <div class="infs">
+                        <p class="nome">Liga de Ferro</p>
+                        <p class="qtd">70Kg</p>
+                    </div>
+                </li>
+            </ul>
+            <div id="myProgress">
+                <div id="myBar" style="display: flex; align-items: center; justify-content: center;"></div>
+            </div>
+            <a href="tela.html" id="back" class="botao">Voltar</a>
+        </div>
+    </div>
+
+    <script>
+        var i = 0;
+        var produto = document.getElementsByClassName("prod");
+        var frase = document.createElement("p");
+        frase.classList.add("concl")
+        frase.innerHTML = "Pronto para rota";
+
+        var confirm = () => {
+            if (i < 100) {
+                i += 20;
+                var elem = document.getElementById("myBar");
+                var width = 0;
+                var id = setInterval(frame, 10);
+
+                function frame() {
+                    width = i;
+                    elem.style.width = width + "%";
+                }
+
+                if (i == 100) {
+                    elem.appendChild(frase)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

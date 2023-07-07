@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #email,
+        #senha {
+            background-color: aliceblue;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 3px;
+            font-size: 1.2em;
+        }
+
+        #butt {
+            align-self: center;
+            background-color: rgb(201, 130, 130);
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 2px;
+            width: 100px;
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="tela_ext">
+        <div class="tela">
+            <h1 id="logo">LogiTrack</h1>
+            <form action="codigo.php" method="POST" class="login">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <input id="butt" type="submit" value="Acessar">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

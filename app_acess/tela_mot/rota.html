@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiTrack</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .map {
+            background-image: url(imagens/Polish_20230705_193757787.jpg);
+            width: 300px;
+            height: 500px;
+            background-size: cover;
+            background-position: center center;
+            margin: 30px auto;
+            border: 3px solid black;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            align-self: center;
+        }
+
+        #myProgress {
+            align-self: center;
+            border: 1px solid black;
+            width: 300px;
+            background-color: grey;
+            border-radius: 20px;
+        }
+
+        #myBar {
+            width: 0%;
+            height: 10px;
+            background-color: green;
+        }
+
+        a {
+            margin: 5px 0 5px 0;
+        }
+
+        input {
+            cursor: pointer;
+            align-self: center;
+            background-color: rgb(139, 201, 130);
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 2px;
+            width: 100px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tela_ext">
+        <div class="tela">
+            <div class="map"></div>
+            <h1>Progresso de entrega</h1>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+            <input type="button" value="Confirmar" onclick="confirm()">
+
+            <script>
+                var i = 0;
+                var produto = document.getElementsByClassName("prod");
+
+                var confirm = () => {
+                    if (i < 100) {
+                        i += 20;
+                        var elem = document.getElementById("myBar");
+                        var width = 0;
+                        var id = setInterval(frame, 10);
+
+                        function frame() {
+                            width = i;
+                            elem.style.width = width + "%";
+                        }
+                    }
+                }
+            </script>
+            <a href="tela.html" id="back" class="botao">Voltar</a>
+
+        </div>
+    </div>
+</body>
+
+</html>
