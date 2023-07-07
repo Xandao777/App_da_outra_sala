@@ -35,13 +35,29 @@
     <div class="tela_ext">
         <div class="tela">
             <h1 id="logo">LogiTrack</h1>
-            <form action="codigo.php" method="POST" class="login">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="password" name="senha" id="senha" placeholder="Senha">
-                <input id="butt" type="submit" value="Acessar">
-            </form>
+            <div class="login">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                <button onclick="fazerLogin()" id="butt" >Acessar</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        function fazerLogin() {
+            var email = document.getElementById("email").value;
+            
+            // Verifica o tipo de email e redireciona para a página correspondente
+            if (email === "entregador@example.com") {
+                window.location.href = "app_acess/tela_mot/tela.html";
+            } else if (email === "adm@example.com") {
+                window.location.href = "app_acess/tela_adm/tela.html";
+            } else if (email === "cliente@example.com") {
+                window.location.href = "app_acess/tela_cli/tela.html";
+            }
+        }
+    </script>
+
 </body>
 
 </html>
