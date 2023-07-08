@@ -39,7 +39,7 @@
         }
 
         .infs {
-            display: none;
+            display: flex;
             flex-direction: row;
             gap: 30px;
         }
@@ -128,20 +128,37 @@
             margin: 0 0 0 30px;
             padding: 0;
         }
+        a {
+            align-self: center;
+            background-color: rgb(201, 130, 130);
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 2px;
+            width: 100px;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        .botao1 {
+            margin-top: 28vh;
+        }
     </style>
 </head>
 
 <body>
     <div class="tela_ext">
         <div class="tela">
-            <h1 class="titulo">Entregas</h1>
+            <h1 class="titulo">Pedidos</h1>
             <ul>
-                <h2>Entrega 01</h2>
+                <h2>Pedido 01</h2>
                 <li class="prod">
                     <div class="perf">
                         <p>Cliente: Tales Marques</p>
-                        <p>Entrega: 129864-2</p>
-                        <p>End: Rua Hngawo JAgeooogwo</p>
+                        <p>Data do pedido: 03/07/2023</p>
+                        <p>End: R. Santo Agostinho, 1717</p>
                     </div>
                     <div class="infs">
                         <div class="grup">
@@ -157,35 +174,10 @@
                             <p class="qtd">50Kg</p>
                         </div>
                     </div>
-                    <button>+</button>
                 </li>
-                <h2>Entrega 02</h2>
-                <li class="prod">
-                    <div class="perf">
-                        <p>Cliente: Alexandre Avelar</p>
-                        <p>Entrega: 129823-777</p>
-                        <p>End: Radiator Springs</p>
-                    </div>
-                    <div class="infs">
-                        <div class="grup">
-                            <p class="nome">Ferro Gussa</p>
-                            <p class="qtd">100Kg</p>
-                        </div>
-                        <div class="grup">
-                            <p class="nome">Silício</p>
-                            <p class="qtd">200Kg</p>
-                        </div>
-                        <div class="grup">
-                            <p class="nome">Carbono</p>
-                            <p class="qtd">50Kg</p>
-                        </div>
-                    </div>
-                    <button>+</button>
-                </li>
-
             </ul>
-            <a href="#" id="add">Adicionar entrega</a>
             <a href="tela.html" id="back" class="botao">Voltar</a>
+            <a href="#" id="botao" class="botao1">Confirmar</a>
         </div>
     </div>
 
