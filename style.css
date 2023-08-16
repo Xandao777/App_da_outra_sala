@@ -8,11 +8,11 @@
 }
 
 body {
-    background-color: rgb(23, 23, 23);
+    background-color: white
 }
 
 .tela_ext {
-    background-color: rgb(131, 131, 131);
+    background-color: black;
     border: 1px solid black;
     border-radius: 10px;
     margin: 104px auto;
@@ -21,7 +21,7 @@ body {
 }
 
 .tela {
-    background-color: rgb(212, 212, 212);
+    background-color: #FEA400;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -46,17 +46,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 1px solid rgb(108, 96, 96);
     padding: 20px;
-    border-radius: 10px;
-    background-color: rgb(157, 157, 157);
+    background-color: #FEA400;
 }
 
 a.botao {
     align-self: center;
-    background-color: rgb(201, 130, 130);
+    background-color: black;
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
     border: 1px solid black;
     border-radius: 3px;
